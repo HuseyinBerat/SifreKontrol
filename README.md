@@ -1,2 +1,9 @@
 # SifreKontrol
-Girilen şifrenin büyük küçük harf en az bir sayı girilen sayıların ardışık olup olmadığının kontrolü yapılan console projesi
+
+# Girilen metinde Büyük küçük harf var mı kontrolü
+
+# Girilen metinde sayı var mı kontolü
+
+# Girilen metinde özel karakter var mı kontrolü
+
+# Girilen metinde sayıların ardışık olup olmadığı kontrolü
