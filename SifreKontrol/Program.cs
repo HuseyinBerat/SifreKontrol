@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace SifreKontrol
 {
@@ -18,7 +19,8 @@ namespace SifreKontrol
             Console.Write("Yazı giriniz:");
 
             metin = Convert.ToString(Console.ReadLine());
-            string[] turkceKarakter = { "ğ", "Ğ", "ç", "Ç", "ş", "Ş", "ü", "Ü", "ö", "Ö", "ı", "İ", " " };
+            string turkce = "ğĞçÇşŞüÜöÖıİ ";
+            var _turkce = turkce.ToCharArray();
             for (int i = 0; i < metin.Length; i++)
             {
                 if (Char.IsUpper(metin[i]))
@@ -62,16 +64,10 @@ namespace SifreKontrol
                     }
                 }
 
-                for (int j = 0; j < turkceKarakter.Length; j++)
+                if (_turkce.Contains(metin[i]))
                 {
-                    if (metin[i].ToString() == turkceKarakter[j])
-                    {
-                        _turkceKarakter = true;
-                    }
+                    _turkceKarakter = true;
                 }
-
-
-
 
             }
             if (!kucuk || !buyuk)
